@@ -28,11 +28,9 @@ git push -u origin <your_branch> #推到你的分支
 
 # 合拼分支到 master
 git checkout master
-git merge <your_branch>   #若要不使用 Fast-forward 的合拼 後面請加註 --no-ff
+git merge <your_branch> --no-ff
 git push -u origin master #推到master
 ```
-
-
 
 ## Tips
 顯示所在分支
@@ -66,4 +64,21 @@ git branch -d <branch name>
 ```sh
 git checkout master
 git branch -m <old> <new>
+```
+
+合拼分支
+```sh
+# 合拼分支到 master
+git checkout master
+git merge <your_branch>   #若要不使用 Fast-forward 的合拼 後面請加註 --no-ff
+git push -u origin master #推到master
+
+#發生衝突．放棄合拼
+git reset --hard
+```
+
+合拼衝突處理
+```sh
+git mergetool
+git commit
 ```

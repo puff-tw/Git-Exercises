@@ -71,7 +71,6 @@ git branch -m <old> <new>
 # 合拼分支到 master
 git checkout master
 git merge <your_branch>   #若要不使用 Fast-forward 的合拼 後面請加註 --no-ff
-git push -u origin master #推到master
 
 #發生衝突．放棄合拼
 git reset --hard
